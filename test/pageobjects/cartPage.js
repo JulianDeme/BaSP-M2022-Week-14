@@ -57,18 +57,8 @@ class cartPage {
 
     //methods
 
-    async clickAddBtnItem_00(){
-        await this.addBtnItem_00.click();
-         browser.pause(4000);
-     };
- 
      async clickRemoveBtnItem_00(){
          await this.removeBtnItem_00.click();
-          browser.pause(4000);
-      };
- 
-     async clickAddBtnItem_01(){
-         await this.addBtnItem_01.click();
           browser.pause(4000);
       };
  

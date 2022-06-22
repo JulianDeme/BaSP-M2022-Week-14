@@ -5,7 +5,7 @@ const checkOutPage = require('../pageobjects/checkOutPage');
 const overviewPage = require('../pageobjects/overviewPage');
 const thankYouPage = require('../pageobjects/thankYouPage');
 
-describe ('Standard User Flow', () =>{
+describe ('Simple Standard User Flow', () =>{
     beforeAll('Open Browser', ()=> {
         browser.url('https://www.saucedemo.com/')
     })
@@ -14,9 +14,13 @@ describe ('Standard User Flow', () =>{
         await loginPage.login('standard_user', 'secret_sauce');
     })
 
+
     it('Verify Main Page Item 00 Img ', async ()=> {
         await expect(mainPage.storeItemImg_00).toBeDisplayed();
     })
+    it('Verify Main Page Item 00 Img correct display', async () => {
+        await expect(mainPage.storeItemImg_00).toHaveAttrContaining('src', '/static/media/bike-light-1200x1500.a0c9caae.jpg');
+    });
     it('Verify Main Page Item 00 Title ', async ()=> {
         await expect(mainPage.storeItemTitle_00).toBeDisplayed();
     })
@@ -30,13 +34,17 @@ describe ('Standard User Flow', () =>{
         await expect(mainPage.addBtnItem_00).toBeClickable();
     })
     it('Click Main Page Item 00 Add Button', async () => {
-        mainPage.clickAddBtnItem_00();
+        await mainPage.clickAddBtnItem_00();
     });
+
 
     it('Verify Main Page Item 01 Img ', async ()=> {
         await expect(mainPage.storeItemImg_01).toBeDisplayed();
     })
-    it('Verify Main Page Item 01Title ', async ()=> {
+    it('Verify Main Page Item 01 Img correct display', async () => {
+        await expect(mainPage.storeItemImg_01).toHaveAttrContaining('src', '/static/media/bolt-shirt-1200x1500.c0dae290.jpg');
+    });
+    it('Verify Main Page Item 01 Title ', async ()=> {
         await expect(mainPage.storeItemTitle_01).toBeDisplayed();
     })
     it('Verify Main Page Item 01 Text', async ()=> {
@@ -49,20 +57,21 @@ describe ('Standard User Flow', () =>{
         await expect(mainPage.addBtnItem_01).toBeClickable();
     })
     it('Click Main Page Item 01 Add Button', async () => {
-        mainPage.clickAddBtnItem_01();
+        await mainPage.clickAddBtnItem_01();
     });
     it('Verify Main Page Item 01 Remove Button', async ()=> {
         await expect(mainPage.removeBtnItem_01).toBeClickable();
     })
     it('Click Main Page Item 01 Remove Button', async () => {
-        mainPage.clickRemoveBtnItem_01();
+        await mainPage.clickRemoveBtnItem_01();
     });
+
 
     it('Verify Main Page Shopping Cart Button', async ()=> {
         await expect(mainPage.headerShoppingCart).toBeClickable();
     })
     it('Click Main Page Shopping Cart Button', async () => {
-        mainPage.clickHeaderShoppingCart();
+        await mainPage.clickHeaderShoppingCart();
     });
     it('Verify Cart Page Item 00 Title ', async ()=> {
         await expect(cartPage.storeItemTitle_00).toBeDisplayed();
@@ -77,26 +86,27 @@ describe ('Standard User Flow', () =>{
         await expect(cartPage.removeBtnItem_00).toBeClickable();
     })
     it('Click Cart Page Item 00 Remove Button', async () => {
-        cartPage.clickRemoveBtnItem_01();
+        await  cartPage.clickRemoveBtnItem_00();
     });
     it('Verify Cart Page Continue Shopping Button', async ()=> {
         await expect(cartPage.continueShoppBtn).toBeClickable();
     })
     it('Click Cart Page Continue Shopping Button', async () => {
-        cartPage.clickContinueShoppBtn();
+        await cartPage.clickContinueShoppBtn();
     });
     it('Click Main Page Item 00 Add Button', async () => {
-        mainPage.clickAddBtnItem_00();
+        await  mainPage.clickAddBtnItem_00();
     });
     it('Click Main Page Shopping Cart Button', async () => {
-        mainPage.clickHeaderShoppingCart();
+        await  mainPage.clickHeaderShoppingCart();
     });
     it('Verify Cart Page Checkout Button', async ()=> {
         await expect(cartPage.checkoutbtn).toBeClickable();
     })
     it('Click Cart Page Checkout Button', async () => {
-        cartPage.clickCheckoutbtn();
+        await cartPage.clickCheckoutbtn();
     });
+
 
     it('Verify CheckOut Page First Name Field', async ()=> {
         await expect(checkOutPage. firstNameField).toBeDisplayed();
@@ -114,8 +124,9 @@ describe ('Standard User Flow', () =>{
         await expect(checkOutPage.continueBtn).toBeClickable();
     })
     it('Click CheckOut Page Continue Shopping Button', async () => {
-        checkOutPage.clickContinueBtn();
+        await  checkOutPage.clickContinueBtn();
     });
+
 
     it('Verify Overview Item 00 Title ', async ()=> {
         await expect(overviewPage.storeItemTitle_00).toBeDisplayed();
@@ -130,30 +141,28 @@ describe ('Standard User Flow', () =>{
         await expect(overviewPage.finishBtn).toBeClickable();
     })
     it('Click Overview Page Finish Button', async () => {
-        overviewPage.clickFinishBtn();
+        await overviewPage.clickFinishBtn();
     });
 
     it('Verify Thank You Page Back Home Button', async ()=> {
         await expect(thankYouPage.backHomeBtn).toBeClickable();
     })
     it('Click Thank You Page Back Home Button', async () => {
-        thankYouPage.clickBackHomeBtn();
+        await  thankYouPage.clickBackHomeBtn();
     });
+
 
     it('Verify Main Page Hamburguer Button', async ()=> {
         await expect(mainPage.headerHamburguer).toBeClickable();
     })
     it('Click Main Page Hamburguer Button', async () => {
-        mainPage.sidebarHeaderHamburguer();
+        await mainPage.sidebarHeaderHamburguer();
     });
     it('Verify Main Page Log Out Button', async ()=> {
         await expect(mainPage.sidebarLogOut).toBeClickable();
     })
     it('Click Main Page Log Out Button', async () => {
-        mainPage.sidebarMenuLogOut();
+        await mainPage.sidebarMenuLogOut();
     });
-
-
-
 
 })
