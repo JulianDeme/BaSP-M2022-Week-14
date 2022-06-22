@@ -74,40 +74,60 @@ class mainPage {
 
     //metgods
 
-    async sidebarMenuCross(){
+    async sidebarHeaderHamburguer(){
         await  this.headerHamburguer.click();
         browser.pause(3000);
+    };
+
+    async sidebarMenuCross(){
         await  this.sidebarCross.click()
+        browser.pause(3000);
     };
 
     async sidebarMenuAllItems(){
-        await this.headerHamburguer.click();
-        browser.pause(3000);
         await this.sidebarInventory.click()
+        browser.pause(3000);
     };
 
     async sidebarMenuAbout(){
-        await this.headerHamburguer.click();
-        browser.pause(3000);
         await this.sidebarAbout.click()
+        browser.pause(3000);
     };
 
     async sidebarMenuLogOut(){
-        await  this.headerHamburguer.click();
-        browser.pause(3000);
         await this.sidebarLogOut.click()
+        browser.pause(3000);
     };
 
     async sidebarMenuReset(){
-        await  this.headerHamburguer.click();
-        browser.pause(3000);
         await this.sidebarReset.click()
+        browser.pause(3000);
     };
 
     async clickAddBtnItem_00(){
        await this.addBtnItem_00.click();
         browser.pause(4000);
     };
+
+    async clickRemoveBtnItem_00(){
+        await this.removeBtnItem_00.click();
+         browser.pause(4000);
+     };
+
+    async clickAddBtnItem_01(){
+        await this.addBtnItem_01.click();
+         browser.pause(4000);
+     };
+
+     async clickRemoveBtnItem_01(){
+        await this.removeBtnItem_01.click();
+         browser.pause(4000);
+     };
+
+     async clickHeaderShoppingCart(){
+        await this.headerShoppingCart.click();
+         browser.pause(4000);
+     };
 
 
 

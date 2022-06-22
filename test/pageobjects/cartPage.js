@@ -23,12 +23,12 @@ class cartPage {
     get storeItemTxt_04 () { return $('#cart_contents_container > div > div.cart_list > div:nth-child(7) > div.cart_item_label > div.inventory_item_desc') }
     get storeItemTxt_05 () { return $('#cart_contents_container > div > div.cart_list > div:nth-child(8) > div.cart_item_label > div.inventory_item_desc') }
 
-    get storeItemPrice_00 () { return $('#inventory_container > div > div:nth-child(2) > div.inventory_item_description > div.pricebar > div') }
-    get storeItemPrice_01 () { return $('#inventory_container > div > div:nth-child(3) > div.inventory_item_description > div.pricebar > div') }
-    get storeItemPrice_02 () { return $('#inventory_container > div > div:nth-child(5) > div.inventory_item_description > div.pricebar > div') }
-    get storeItemPrice_03 () { return $('#inventory_container > div > div:nth-child(6) > div.inventory_item_description > div.pricebar > div') }
-    get storeItemPrice_04 () { return $('#inventory_container > div > div:nth-child(1) > div.inventory_item_description > div.pricebar > div') }
-    get storeItemPrice_05 () { return $('#inventory_container > div > div:nth-child(4) > div.inventory_item_description > div.pricebar > div') }
+    get storeItemPrice_00 () { return $('#cart_contents_container > div > div.cart_list > div:nth-child(3) > div.cart_item_label > div.item_pricebar > div') }
+    get storeItemPrice_01 () { return $('#cart_contents_container > div > div.cart_list > div:nth-child(4) > div.cart_item_label > div.item_pricebar > div') }
+    get storeItemPrice_02 () { return $('#cart_contents_container > div > div.cart_list > div:nth-child(5) > div.cart_item_label > div.item_pricebar > div') }
+    get storeItemPrice_03 () { return $('#cart_contents_container > div > div.cart_list > div:nth-child(6) > div.cart_item_label > div.item_pricebar > div') }
+    get storeItemPrice_04 () { return $('#cart_contents_container > div > div.cart_list > div:nth-child(7) > div.cart_item_label > div.item_pricebar > div') }
+    get storeItemPrice_05 () { return $('#cart_contents_container > div > div.cart_list > div:nth-child(8) > div.cart_item_label > div.item_pricebar > div') }
 
     get removeBtnItem_00 () { return $('#remove-sauce-labs-bike-light') }
     get removeBtnItem_01 () { return $('#remove-sauce-labs-bolt-t-shirt') }
@@ -56,6 +56,41 @@ class cartPage {
     //Setters
 
     //methods
+
+    async clickAddBtnItem_00(){
+        await this.addBtnItem_00.click();
+         browser.pause(4000);
+     };
+ 
+     async clickRemoveBtnItem_00(){
+         await this.removeBtnItem_00.click();
+          browser.pause(4000);
+      };
+ 
+     async clickAddBtnItem_01(){
+         await this.addBtnItem_01.click();
+          browser.pause(4000);
+      };
+ 
+      async clickRemoveBtnItem_01(){
+         await this.removeBtnItem_01.click();
+          browser.pause(4000);
+      };
+ 
+      async clickHeaderShoppingCart(){
+         await this.headerShoppingCart.click();
+          browser.pause(4000);
+      };
+
+      async clickContinueShoppBtn(){
+        await this.continueShoppBtn.click();
+         browser.pause(4000);
+     };
+
+     async clickCheckoutbtn(){
+        await this.checkoutbtn.click();
+         browser.pause(4000);
+     };
 
 }
 module.exports = new cartPage()

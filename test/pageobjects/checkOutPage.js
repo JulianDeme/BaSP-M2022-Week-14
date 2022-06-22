@@ -31,14 +31,28 @@ class checkOutPage {
 
     //Setters
 
+    async setFirstName(firstName) {
+        await this.firstNameField.setValue(firstName);
+    }
+    async setLastName(lastName) {
+        await this.lastNameField.setValue(lastName);
+    }
+    async setZip(zip) {
+        await this.zipField.setValue(zip);
+    }
+
     //methods
 
-    async checkOut(firstNameField, lastNameField, zipField) {
-        await this.setFirstName(firstNameField);
-        await this.setLastName(lastNameField);
-        await this.setZip(zipField);
-        await this.continueBtn.click()
+    async checkOut(firstName, lastName, zip) {
+        await this.setFirstName(firstName);
+        await this.setLastName(lastName);
+        await this.setZip(zip);
     }
+
+    async clickContinueBtn(){
+        await this.continueBtn.click();
+         browser.pause(4000);
+     };
 
 }
 module.exports = new checkOutPage()

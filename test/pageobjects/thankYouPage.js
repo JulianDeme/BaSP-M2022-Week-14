@@ -31,5 +31,10 @@ class thankYouPage {
 
     //methods
 
+    async clickBackHomeBtn(){
+        await this.backHomeBtn.click();
+         browser.pause(4000);
+     };
+
 }
 module.exports = new thankYouPage()
