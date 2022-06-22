@@ -48,6 +48,9 @@ class mainPage {
 
     get addBtnItem_03 () { return $('#add-to-cart-test\.allthethings\(\)-t-shirt-\(red\)') }
     get removeBtnItem_03 () { return $('#remove-test\.allthethings\(\)-t-shirt-\(red\)') }
+    // get addBtnItem_03 () { return $('#add-to-cart-test.allthethings()-t-shirt-(red)') }
+    // get removeBtnItem_03 () { return $('#remove-test.allthethings()-t-shirt-(red)') }
+    // It doesn´t work in both cases.
 
     get addBtnItem_04 () { return $('#add-to-cart-sauce-labs-backpack') }
     get removeBtnItem_04 () { return $('#remove-sauce-labs-backpack') }
@@ -104,11 +107,11 @@ class mainPage {
         browser.pause(3000);
     };
 
+
     async clickAddBtnItem_00(){
        await this.addBtnItem_00.click();
         browser.pause(4000);
     };
-
     async clickRemoveBtnItem_00(){
         await this.removeBtnItem_00.click();
          browser.pause(4000);
@@ -118,9 +121,44 @@ class mainPage {
         await this.addBtnItem_01.click();
          browser.pause(4000);
      };
-
      async clickRemoveBtnItem_01(){
         await this.removeBtnItem_01.click();
+         browser.pause(4000);
+     };
+
+     async clickAddBtnItem_02(){
+        await this.addBtnItem_02.click();
+         browser.pause(4000);
+     };
+     async clickRemoveBtnItem_02(){
+        await this.removeBtnItem_02.click();
+         browser.pause(4000);
+     };
+
+     async clickAddBtnItem_03(){
+        await this.addBtnItem_01.click();
+         browser.pause(4000);
+     };
+     async clickRemoveBtnItem_03(){
+        await this.removeBtnItem_03.click();
+         browser.pause(4000);
+     };
+
+     async clickAddBtnItem_04(){
+        await this.addBtnItem_04.click();
+         browser.pause(4000);
+     };
+     async clickRemoveBtnItem_04(){
+        await this.removeBtnItem_04.click();
+         browser.pause(4000);
+     };
+
+     async clickAddBtnItem_05(){
+        await this.addBtnItem_05.click();
+         browser.pause(4000);
+     };
+     async clickRemoveBtnItem_05(){
+        await this.removeBtnItem_05.click();
          browser.pause(4000);
      };
 

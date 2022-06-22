@@ -12,6 +12,8 @@ class checkOutPage {
     get firstNameField () { return $('#first-name') }
     get lastNameField () { return $('#last-name') }
     get zipField () { return $('#postal-code') }
+    get ErrorContainer () { return $('#checkout_info_container > div > form > div.checkout_info > div.error-message-container.error') }
+    get ErrorCleaner () { return $('#checkout_info_container > div > form > div.checkout_info > div.error-message-container.error > h3 > button > svg > path') }
 
     get cancelBtnCO () { return $('#cancel') }
     get continueBtn () { return $('#continue') }
@@ -51,6 +53,11 @@ class checkOutPage {
 
     async clickContinueBtn(){
         await this.continueBtn.click();
+         browser.pause(4000);
+     };
+
+    async clickCancelBtnCO(){
+        await this.cancelBtnCO.click();
          browser.pause(4000);
      };
 

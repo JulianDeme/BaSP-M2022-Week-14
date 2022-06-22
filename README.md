@@ -37,7 +37,8 @@ https://webdriver.io/docs/gettingstarted
 <br />
 
 ## - In the Git Bash window
+- git init
+- npm run test
 
-### - git init
-### - npm run test
+Detailed Standard User is commented by default because of it lenght.
 
