@@ -48,19 +48,19 @@ describe ('Simple Standard User Flow', () =>{
     it('Verify Main Page Header Logo', async ()=> {
         await expect(mainPage.headerLogo).toBeDisplayed();
     })
-    it('Verify Log In Page Header Hamburguer', async ()=> {
+    it('Verify Main Page Header Hamburguer', async ()=> {
         await expect(mainPage.headerHamburguer).toBeDisplayed();
     })
-    it('Verify Log In Page Error Header Shopping Cart Button', async ()=> {
+    it('Verify Main Page Error Header Shopping Cart Button', async ()=> {
         await expect(mainPage.headerShoppingCart).toBeDisplayed();
     })
-    it('Verify Log In Page Second Header', async ()=> {
+    it('Verify Main Page Second Header', async ()=> {
         await expect(mainPage.secondHeader).toBeDisplayed();
     })
-    it('Verify Log In Page Second Header Pet', async ()=> {
+    it('Verify Main Page Second Header Pet', async ()=> {
         await expect(mainPage.secondHeaderPet).toBeDisplayed();
     })
-    it('Verify Log In Page Second Header Title', async ()=> {
+    it('Verify Main Page Second Header Title', async ()=> {
         await expect(mainPage.secondHeaderTitle).toBeDisplayed();
     })
 
@@ -479,91 +479,66 @@ describe ('Simple Standard User Flow', () =>{
         await  checkOutPage.clickContinueBtn();
     });
 
-
-
-
-
-
-
-
-
-    it('Verify Cart Page Item 00 Title ', async ()=> {
+    
+    it('Verify Overview Page Item 00 Title ', async ()=> {
         await expect(overviewPage.storeItemTitle_00).toBeDisplayed();
     })
-    it('Verify Cart Page Item 00 Text', async ()=> {
+    it('Verify Overview Page Item 00 Text', async ()=> {
         await expect(overviewPage.storeItemTxt_00).toBeDisplayed();
     })
-    it('Verify Cart Page Item 00 Text Message', async ()=> {
-        await expect(overviewPage.storeItemTxt_00).toHaveText('A red light isn\'t the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.')
-    })
-    it('Verify Cart Page Item 00 Price', async ()=> {
+    it('Verify Overview Page Item 00 Price', async ()=> {
         await expect(overviewPage.storeItemPrice_00).toBeDisplayed();
     })
 
 
-    it('Verify Cart Page Item 01 Title ', async ()=> {
+    it('Verify Overview Page Item 01 Title ', async ()=> {
         await expect(overviewPage.storeItemTitle_01).toBeDisplayed();
     })
-    it('Verify Cart Page Item 01 Text', async ()=> {
+    it('Verify Overview Page Item 01 Text', async ()=> {
         await expect(overviewPage.storeItemTxt_01).toBeDisplayed();
     })
-    it('Verify Cart Page Item 01 Text Message', async ()=> {
-        await expect(overviewPage.storeItemTxt_01).toHaveText('Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.')
-    })
-    it('Verify Cart Page Item 01 Price', async ()=> {
+    it('Verify Overview Page Item 01 Price', async ()=> {
         await expect(overviewPage.storeItemPrice_01).toBeDisplayed();
     })
 
-    it('Verify Cart Page Item 02 Title ', async ()=> {
+    it('Verify Overview Page Item 02 Title ', async ()=> {
         await expect(overviewPage.storeItemTitle_02).toBeDisplayed();
     })
-    it('Verify Cart Page Item 02 Text', async ()=> {
+    it('Verify Overview Page Item 02 Text', async ()=> {
         await expect(overviewPage.storeItemTxt_02).toBeDisplayed();
     })
-    it('Verify Cart Page Item 02 Text Message', async ()=> {
-        await expect(overviewPage.storeItemTxt_02).toHaveText('Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won\'t unravel.')
-    })
-    it('Verify Cart Page Item 02 Price', async ()=> {
-        await expect(cartPoverviewPageage.storeItemPrice_02).toBeDisplayed();
+    it('Verify Overview Page Item 02 Price', async ()=> {
+        await expect(overviewPage.storeItemPrice_02).toBeDisplayed();
     })
 
-    // it('Verify Cart Page Item 03 Title ', async ()=> {
+    // it('Verify Overview Page Item 03 Title ', async ()=> {
     //     await expect(overviewPage.storeItemTitle_03).toBeDisplayed();
     // })
-    // it('Verify Cart Page Item 03 Text', async ()=> {
+    // it('Verify Overview Page Item 03 Text', async ()=> {
     //     await expect(overviewPage.storeItemTxt_03).toBeDisplayed();
     // })
-    // it('Verify Cart Page Item 03 Text Message', async ()=> {
-    //     await expect(overviewPage.storeItemTxt_03).toHaveText('This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.')
-    // })
-    // it('Verify Cart Page Item 03 Price', async ()=> {
+    // it('Verify Overview Page Item 03 Price', async ()=> {
     //     await expect(overviewPage.storeItemPrice_03).toBeDisplayed();
     // })
     // Didn´t pass previous test. 
 
-    it('Verify Cart Page Item 04 Title ', async ()=> {
+    it('Verify Overview Page Item 04 Title ', async ()=> {
         await expect(overviewPage.storeItemTitle_04).toBeDisplayed();
     })
-    it('Verify Cart Page Item 04 Text', async ()=> {
+    it('Verify Overview Page Item 04 Text', async ()=> {
         await expect(overviewPage.storeItemTxt_04).toBeDisplayed();
     })
-    it('Verify Cart Page Item 04 Text Message', async ()=> {
-        await expect(overviewPage.storeItemTxt_04).toHaveText('carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.')
-    })
-    it('Verify Cart Page Item 04 Price', async ()=> {
+    it('Verify Overview Page Item 04 Price', async ()=> {
         await expect(overviewPage.storeItemPrice_04).toBeDisplayed();
     })
     
-    it('Verify Cart Page Item 05 Title ', async ()=> {
+    it('Verify Overview Page Item 05 Title ', async ()=> {
         await expect(overviewPage.storeItemTitle_05).toBeDisplayed();
     })
-    it('Verify Cart Page Item 05 Text', async ()=> {
+    it('Verify Overview Page Item 05 Text', async ()=> {
         await expect(overviewPage.storeItemTxt_05).toBeDisplayed();
     })
-    it('Verify Cart Page Item 05 Text Message', async ()=> {
-        await expect(overviewPage.storeItemTxt_05).toHaveText('It\'s not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office.')
-    })
-    it('Verify Cart Page Item 05 Price', async ()=> {
+    it('Verify Overview Page Item 05 Price', async ()=> {
         await expect(overviewPage.storeItemPrice_05).toBeDisplayed();
     })
 
@@ -590,21 +565,68 @@ describe ('Simple Standard User Flow', () =>{
     })
 
     it('Verify Overview Page Cancel Button', async ()=> {
-        await expect(checkOutPage.cancelBtnO).toBeClickable();
+        await expect(overviewPage.cancelBtnO).toBeClickable();
     })
     it('Click  Overview Page Cancel Button', async () => {
-        await  checkOutPage.clickCancelBtnO();
+        await  overviewPage.clickCancelBtnO();
+    });
+    it('Click Main Page Shopping Cart Button', async () => {
+        await mainPage.clickHeaderShoppingCart();
+    });
+    it('Click Cart Page Checkout Button', async () => {
+        await cartPage.clickCheckoutbtn();
+    });
+    it('Complete CheckOut Page Form', async ()=>{
+        await checkOutPage.checkOut('Pepito', 'Pepon', '2154');
+    })
+    it('Click CheckOut Page Continue Shopping Button', async () => {
+        await  checkOutPage.clickContinueBtn();
     });
     it('Verify Overview Page Finish Button', async ()=> {
-        await expect(checkOutPage.finishBtn).toBeClickable();
+        await expect(overviewPage.finishBtn).toBeClickable();
     })
     it('Click  Overview Page Finish Button', async () => {
-        await  checkOutPage.clickFinishBtn();
+        await  overviewPage.clickFinishBtn();
     });
 
 
+    it('Verify Thank You Page Thanks', async ()=> {
+        await expect(thankYouPage.thanksForOrder).toBeDisplayed();
+    })
+    it('Verify Thank You Page Delivery', async ()=> {
+        await expect(thankYouPage.deliveryText).toBeDisplayed();
+    })
+    it('Verify Thank You Page Pony', async ()=> {
+        await expect(thankYouPage.ponyLogo).toBeDisplayed();
+    })
+    it('Verify Thank You Page Back Home Button', async ()=> {
+        await expect(thankYouPage.backHomeBtn).toBeDisplayed();
+    })
+    it('Click  Thank You Page Back Home Button', async () => {
+        await  thankYouPage.clickBackHomeBtn();
+    });
 
 
-
+    it('Click Main Page Header Hamburguer', async () => {
+        await  mainPage.sidebarHeaderHamburguer();
+    });
+    it('Verify Main Page Sidebar Cross', async ()=> {
+        await expect(mainPage.sidebarCross).toBeDisplayed();
+    })
+    it('Verify Main Page Sidebar Inventory', async ()=> {
+        await expect(mainPage.sidebarInventory).toBeDisplayed();
+    })
+    it('Verify Main Page Sidebar About', async ()=> {
+        await expect(mainPage.sidebarAbout).toBeDisplayed();
+    })
+    it('Verify Main Page Sidebar Log Out', async ()=> {
+        await expect(mainPage.sidebarLogOut).toBeDisplayed();
+    })
+    it('Verify Main Page Sidebar Reset', async ()=> {
+        await expect(mainPage.sidebarReset).toBeDisplayed();
+    })
+    it('Click  Main Page Sidebar Log Out', async () => {
+        await  mainPage.sidebarMenuLogOut();
+    });
 
 })
