@@ -9,8 +9,11 @@ class loginPage {
     get PetImg() { return $('#root > div > div.login_wrapper > div.login_wrapper-inner > div.bot_column')}
 
     //Setters
-    async setUsername(username, password) {
+
+    async setUsername(username) {
         await this.UsernameField.setValue(username);
+    }
+    async setPassword(password) {
         await this.PasswordField.setValue(password);
     }
 
@@ -18,7 +21,7 @@ class loginPage {
     async login(username, password) {
         await this.setUsername(username);
         await this.setPassword(password);
-        await this.loginPage.click()
+        await this.LogInBtn.click()
     }
 }
-module.exports = new loginPage()
+module.exports = new loginPage();

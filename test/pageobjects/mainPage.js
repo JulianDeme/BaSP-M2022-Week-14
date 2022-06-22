@@ -1,4 +1,4 @@
-class homePage {
+class mainPage {
 
     //getters
 
@@ -75,33 +75,42 @@ class homePage {
     //metgods
 
     async sidebarMenuCross(){
-        this.headerHamburguer.click();
+        await  this.headerHamburguer.click();
         browser.pause(3000);
-        this.sidebarCross.click()
+        await  this.sidebarCross.click()
     };
 
     async sidebarMenuAllItems(){
-        this.headerHamburguer.click();
+        await this.headerHamburguer.click();
         browser.pause(3000);
-        this.sidebarInventory.click()
+        await this.sidebarInventory.click()
     };
 
     async sidebarMenuAbout(){
-        this.headerHamburguer.click();
+        await this.headerHamburguer.click();
         browser.pause(3000);
-        this.sidebarAbout.click()
+        await this.sidebarAbout.click()
     };
 
     async sidebarMenuLogOut(){
-        this.headerHamburguer.click();
+        await  this.headerHamburguer.click();
         browser.pause(3000);
-        this.sidebarLogOut.click()
+        await this.sidebarLogOut.click()
     };
 
     async sidebarMenuReset(){
-        this.headerHamburguer.click();
+        await  this.headerHamburguer.click();
         browser.pause(3000);
-        this.sidebarReset.click()
+        await this.sidebarReset.click()
     };
+
+    async clickAddBtnItem_00(){
+       await this.addBtnItem_00.click();
+        browser.pause(4000);
+    };
+
+
+
+
 }
-module.exports = new homePage()
+module.exports = new mainPage()

@@ -16,11 +16,6 @@ class checkOutPage {
     get cancelBtnCO () { return $('#cancel') }
     get continueBtn () { return $('#continue') }
 
-
-
-
-
-
     get footerContainer() { return $('#page_wrapper > footer') }
     get footerPet () { return $('#page_wrapper > footer > img') }
     get footerTw () { return $('#page_wrapper > footer > ul > li.social_twitter > a') }
