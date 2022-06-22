@@ -13,7 +13,7 @@ class checkOutPage {
     get lastNameField () { return $('#last-name') }
     get zipField () { return $('#postal-code') }
 
-    get cancelBtn () { return $('#cancel') }
+    get cancelBtnCO () { return $('#cancel') }
     get continueBtn () { return $('#continue') }
 
 

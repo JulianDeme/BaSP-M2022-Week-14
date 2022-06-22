@@ -9,7 +9,6 @@ class cartPage {
     get secondHeaderPet () { return $('#header_container > div.header_secondary_container > div.peek') }
     get secondHeaderTitle () { return $('#header_container > div.header_secondary_container > span') }
 
-   
     get storeItemTitle_00 () { return $('#item_0_title_link > div') }
     get storeItemTitle_01 () { return $('#item_1_title_link > div') }
     get storeItemTitle_02 () { return $('#item_2_title_link > div') }
